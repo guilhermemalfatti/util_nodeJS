@@ -18,7 +18,7 @@ fs.writeFile(process.argv[3], '', function (err) {
 var indexOf = 0;
 lineReader.eachLine(process.argv[2], function(line, last) {
     indexOf = line.indexOf(" ");
-
+    //debugger;
     fs.appendFile(process.argv[3], line.substr(indexOf).trim() + '\n', function (err) {
 
     });

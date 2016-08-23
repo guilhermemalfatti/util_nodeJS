@@ -18,10 +18,12 @@ var i = 0;
 lineReader.eachLine(process.argv[2], function(line, last) {
     i++;
     //console.log(i);
+    //debugger;
     fs.appendFile(process.argv[3], i + ' ' + line + '\n', function (err) {
 
     });
     if (last) {
+        console.log('Done!');
         return false; // stop reading
     }
 
